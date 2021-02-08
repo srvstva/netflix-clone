@@ -2,6 +2,11 @@
 
 A simple netflix clone built with React & the movie database API's
 
+## Adding an API key
+
+Create a .env file and add a variable named REACT_APP_API_KEY=xxxxxxxx
+Make sure to replace xxxxxxxx with your api key
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -18,7 +23,3 @@ You will also see any lint errors in the console.
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
-
-
-

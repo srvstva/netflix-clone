@@ -1,0 +1,29 @@
+.navbar {
+  background-color: transparent;
+  height: 60px;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar--scrolling {
+  background-color: black;
+  transition: ease-in 0.2s;
+}
+
+.navbar__container {
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar__logo {
+  height: 64px;
+}
+
+.navbar__avatar {
+  height: 32px;
+}

@@ -1,0 +1,49 @@
+.row {
+  padding: 10px 0;
+  background-color: #111;
+}
+
+.row__title {
+  text-transform: capitalize;
+  color: #fafafa;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.rowCard {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  /* border-radius: 1px; */
+}
+.rowCard__image {
+  border-radius: 5px;
+  margin-top: 10px;
+  /* margin-right: 10px; */
+  /* width: 240px; */
+  height: 160px;
+  object-fit: cover;
+  transition: all 0.2s ease-in;
+}
+.rowCard__image--isLarge {
+  height: 240px;
+}
+
+.rowCard::-webkit-scrollbar {
+  display: none;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.rowCard__image:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.rowCard__wrapper {
+  padding: 10px;
+  margin-right: 5px;
+}

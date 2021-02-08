@@ -1,4 +1,4 @@
-const API_KEY = "d52faf1c3f5a7486d617234325d58aab";
+const API_KEY = process.env.REACT_APP_API_KEY;
 const API_END_POINT = "https://api.themoviedb.org/3";
 
 const MOVIE_NOW_PLAYING = `${API_END_POINT}/movie/now_playing?api_key=${API_KEY}`;

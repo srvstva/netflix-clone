@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./LandingPage.css";
 
 const LandingPage = () => {
-  const [showLogin, setShowLogin] = useState(false);
+  const history = useHistory();
+
   return (
     <div className="landingpage">
       <div className="landingpage__gradient"></div>
@@ -16,7 +18,9 @@ const LandingPage = () => {
           </h6>
           <div className="landinpage__form_control">
             <input type="text" placeholder="Email address" />
-            <button>Get started</button>
+            <button onClick={() => history.push("/in/login")}>
+              Get started
+            </button>
           </div>
         </div>
       </div>

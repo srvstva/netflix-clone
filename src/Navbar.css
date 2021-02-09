@@ -22,8 +22,10 @@
 
 .navbar__logo {
   height: 64px;
+  cursor: pointer;
 }
 
 .navbar__avatar {
   height: 32px;
+  cursor: pointer;
 }

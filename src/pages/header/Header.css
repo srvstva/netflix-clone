@@ -15,6 +15,7 @@
 
 .header__logo {
   height: 100px;
+  cursor: pointer;
 }
 
 .header__button {

@@ -1,0 +1,124 @@
+.loginpage {
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/538717c0-f271-40e9-a99e-b07f9c521322/4a9270dc-7a97-44da-bda4-4dfc2dd4ea20/IN-en-20210201-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.loginpage__gradient {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(
+    to right top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+.loginpage__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 20;
+}
+
+.loginpage__form__control {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 20;
+  padding: 50px;
+  border-radius: 5px;
+}
+
+.loginpage__form__control > h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-between;
+}
+.control-checkbox {
+  display: flex;
+  align-items: center;
+}
+.loginpage__form__control > input {
+  padding: 20px 30px;
+  background-color: #333333;
+  border: none;
+  outline: none;
+  margin-bottom: 30px;
+}
+
+.loginpage__form__control > button {
+  padding: 10px 20px;
+  outline: none;
+  background-color: #ef0823;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.control-checkbox > label {
+  font-size: 12px;
+  color: #b3b3b3;
+  margin-left: 5px;
+}
+
+.controls > h5 {
+  color: #b3b3b3;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.controls > h5:hover {
+  color: #b3b3b3;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.social-login {
+  color: #b3b3b3;
+  font-size: 14px;
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.footer > h5 {
+  font-size: 14px;
+  color: #b3b3b3;
+  font-weight: 500;
+}
+
+.footer > h5 > span {
+  color: white;
+  font-size: 16px;
+}
+
+.footer > h5 > span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.loginpage__form__control > input::placeholder {
+  font-size: 14px;
+}

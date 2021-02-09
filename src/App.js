@@ -13,6 +13,7 @@ import {
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LandingPage from "./pages/landing/LandingPage";
 import Header from "./pages/header/Header";
+import LoginPage from "./pages/login/LoginPage";
 
 function App() {
   const [movie, setMovie] = useState(null);
@@ -25,6 +26,7 @@ function App() {
         setMovie(movies[randomIndex]);
       });
   }, []);
+
   return (
     <Router>
       <div className="App">
@@ -35,7 +37,7 @@ function App() {
           </Route>
           <Route exact path="/in/login">
             <Header />
-            <LandingPage />
+            <LoginPage />
           </Route>
         </Switch>
         <Route exact path="/">

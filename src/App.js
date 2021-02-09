@@ -10,6 +10,10 @@ import {
   MOVIE_UPCOMING,
 } from "./requests";
 
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import LandingPage from "./pages/landing/LandingPage";
+import Header from "./pages/header/Header";
+
 function App() {
   const [movie, setMovie] = useState(null);
   useEffect(() => {
@@ -22,20 +26,35 @@ function App() {
       });
   }, []);
   return (
-    <div className="App">
-      <Navbar />
-      <Banner
-        title={movie?.title}
-        overview={movie?.overview}
-        backdropUrl={`https://image.tmdb.org/t/p/original/${
-          movie?.poster_path || movie?.backdrop_path
-        }`}
-      />
-      <Row isLarge title="Now Playing" endpoint={MOVIE_NOW_PLAYING} />
-      <Row title="Popular Movies" endpoint={MOVIE_POPULAR} />
-      <Row title="Top Rated Movies" endpoint={MOVIE_TOP_RATED} />
-      <Row title="Upcoming Movies" endpoint={MOVIE_UPCOMING} />
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/in">
+            <Header showLoginButton />
+            <LandingPage />
+          </Route>
+          <Route exact path="/in/login">
+            <Header />
+            <LandingPage />
+          </Route>
+        </Switch>
+        <Route exact path="/">
+          <Navbar />
+
+          <Banner
+            title={movie?.title}
+            overview={movie?.overview}
+            backdropUrl={`https://image.tmdb.org/t/p/original/${
+              movie?.poster_path || movie?.backdrop_path
+            }`}
+          />
+          <Row isLarge title="Now Playing" endpoint={MOVIE_NOW_PLAYING} />
+          <Row title="Popular Movies" endpoint={MOVIE_POPULAR} />
+          <Row title="Top Rated Movies" endpoint={MOVIE_TOP_RATED} />
+          <Row title="Upcoming Movies" endpoint={MOVIE_UPCOMING} />
+        </Route>
+      </div>
+    </Router>
   );
 }
 
